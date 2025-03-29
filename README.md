@@ -115,4 +115,5 @@ This pipeline showcases **core competencies** in modern data engineering and ana
 
 ## 📸 DAG Execution Snapshot
 
-_Add a screenshot of your Airflow DAG here for visual reference._
+![image](https://github.com/user-attachments/assets/18dd9b3b-3456-49d1-a9f5-8e8027f3f22d)
+
