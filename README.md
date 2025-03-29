@@ -1,34 +1,33 @@
 # End-to-End ELT Pipeline with dbt, Snowflake & Airflow
 
-This project demonstrates an end-to-end **ELT pipeline** using **dbt**, **Snowflake**, and **Apache Airflow**, orchestrated in a containerized environment via the **Astro CLI**. It showcases a modern, testable, and production-aligned data engineering workflow—from raw data ingestion to final reporting layers.
+This project demonstrates an end-to-end **ELT pipeline** using **dbt**, **Snowflake**, and **Apache Airflow**, orchestrated in a containerized environment via the **Astro CLI**. It reflects a modern data engineering approach—modular, testable, and aligned with production standards.
 
 ---
 
 ## 🚀 Overview
 
-**Pipeline Flow:**
+This project simulates a real-world data transformation workflow using the modern data stack. Here's what it covers:
 
-1. Extract sample data from **Snowflake Sample TPCH Dataset**
-2. Transform it using **dbt models**, **macros**, and **modular SQL layers**
-3. Apply **automated tests** to validate transformations
-4. Orchestrate and schedule runs with **Apache Airflow DAGs**
-5. Run locally using **Astro CLI (Dockerized Airflow)**
+1. Extract sample data from the **Snowflake TPCH dataset**
+2. Transform and model it using **dbt** with **modular SQL layers**
+3. Apply **data quality testing** (generic and custom)
+4. Schedule and orchestrate runs using **Apache Airflow DAGs**
+5. Run locally inside containers using **Astro CLI**
 
 ---
 
 ## ⚙️ Tools & Technologies
 
-| Tool                | Purpose                                        |
-|---------------------|------------------------------------------------|
-| **Snowflake**       | Cloud data warehouse (source + target)         |
-| **dbt**             | SQL transformations, testing, and lineage      |
-| **Apache Airflow**  | Workflow orchestration via DAGs                |
-| **Astronomer Cosmos** | Connects dbt projects to Airflow             |
-| **Docker / Astro CLI** | Local dev environment for airflow & dbt     |
-| **Python**          | DAG and orchestration logic                    |
+| Tool                  | Purpose                                        |
+|-----------------------|------------------------------------------------|
+| **Snowflake**         | Cloud data warehouse (source & destination)    |
+| **dbt**               | SQL-based modeling, macros, and testing        |
+| **Apache Airflow**    | Orchestration engine for scheduling workflows  |
+| **Astronomer Cosmos** | Seamless integration between dbt & Airflow     |
+| **Docker / Astro CLI**| Containerized local dev environment            |
+| **Python**            | DAG construction and operator logic            |
 
 ---
-
 
 ## 📁 Project Structure
 
@@ -60,7 +59,7 @@ This project demonstrates an end-to-end **ELT pipeline** using **dbt**, **Snowfl
 ├── airflow_settings.yaml
 └── README.md
 
-
+```  
 
 ---
 
@@ -114,16 +113,4 @@ The pipeline is modular, testable, reproducible, and ready for scaling or adapta
 
 📸 DAG Execution Snapshot
 
-🔗 Repository
-GitHub: End-to-End-ELT-Pipeline-with-dbt-Snowflake-Airflow
-
-python
-Copy
-Edit
-
-### ✅ Next Steps (Optional)
-Let me know if you'd like me to:
-- Add a small "How to Run Locally" section
-- Rename `README_assets` and move the DAG image accordingly
-- Convert this into a **Notion or Portfolio writeup**
 
