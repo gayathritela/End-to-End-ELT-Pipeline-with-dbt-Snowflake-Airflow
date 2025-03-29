@@ -63,54 +63,59 @@ This project simulates a real-world data transformation workflow using the moder
 
 ---
 
+-
 
-✅ Key Features
-🧱 Modular dbt model design (staging → intermediate → fact layers)
+## ✅ Key Features
 
-🔁 Custom macros for DRY SQL logic (e.g., discount calculations)
+- 🧱 **Modular dbt model design** (`staging → intermediate → fact` layers)
+- 🔁 **Custom macros** for DRY SQL logic (e.g., discount calculations)
+- 🧪 **Integrated data quality testing**
+  - **Generic tests**: `unique`, `not_null`, `relationships`, `accepted_values`
+  - **Singular tests**: custom checks like `invalid discounts`, `invalid dates`
+- ⚙️ **Full DAG orchestration** via Cosmos' `DbtDag` in **Airflow**
+- 🐳 **Dockerized development** with **Astro CLI** for a consistent local environment
 
-🧪 Integrated data quality testing:
+---
 
-Generic tests: unique, not_null, relationships, accepted_values
+## 🧪 DAG: Orchestration Flow
 
-Singular tests: invalid discounts, invalid dates
-
-⚙️ Full DAG orchestration via Cosmos' DbtDag in Airflow
-
-🐳 Dockerized development using Astro CLI for consistent local environment
-
-🧪 DAG: Orchestration Flow
-text
-Copy
-Edit
+```
 stg_tpch_orders → stg_tpch_line_items_run
-                          ↓
-                int_order_items_run
-                          ↓
-         int_order_items_summary_run
-                          ↓
-                   fct_orders
-Each step corresponds to a dbt model or test and is handled by Cosmos' DbtDag integration inside Airflow.
+                      ↓
+            int_order_items_run
+                      ↓
+     int_order_items_summary_run
+                      ↓
+               fct_orders
+```
 
-🧬 Data Validation Tests
-Test Type	Description
-Generic	Uniqueness, Not Null, Relationships, Accepted Values
-Singular	Custom SQL to check date ranges and discount logic
-🎯 Why This Project Matters
-This project simulates how modern data teams build real pipelines. It reflects critical skills for Data Engineering, Analytics Engineering, and Cloud ETL roles:
+Each step corresponds to a **dbt model** or **test** and is executed through **Cosmos’ `DbtDag`** integration inside Airflow.
 
-✅ Real-world use of the modern data stack
+---
 
-🧱 Layered dbt model design with ref-based dependencies
+## 🧬 Data Validation Tests
 
-⚙️ Proficiency in workflow orchestration using DAGs
+| Test Type | Description                                                |
+|-----------|------------------------------------------------------------|
+| Generic   | Uniqueness, Not Null, Relationships, Accepted Values       |
+| Singular  | Custom SQL tests to validate date ranges and discount logic|
 
-🧪 Implementation of data quality tests across layers
+---
 
-🐳 Experience with containerized, reproducible environments
+## 🎯 Why This Project Matters
 
-The pipeline is modular, testable, reproducible, and ready for scaling or adaptation to production platforms.
+This pipeline showcases **core competencies** in modern data engineering and analytics:
 
-📸 DAG Execution Snapshot
+- ✅ Real-world use of the **modern data stack**
+- 🧱 **Layered dbt model** architecture with `ref()` dependencies
+- ⚙️ **Workflow orchestration** using DAGs in Airflow
+- 🧪 **Data quality testing** at multiple transformation layers
+- 🐳 **Containerized development** with reproducibility across systems
 
+> The pipeline is **modular**, **testable**, **reproducible**, and ready for scaling or adaptation to production-grade environments.
 
+---
+
+## 📸 DAG Execution Snapshot
+
+_Add a screenshot of your Airflow DAG here for visual reference._
