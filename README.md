@@ -111,9 +111,5 @@ This pipeline showcases **core competencies** in modern data engineering and ana
 
 > The pipeline is **modular**, **testable**, **reproducible**, and ready for scaling or adaptation to production-grade environments.
 
----
 
-## 📸 DAG Execution Snapshot
-
-![image](https://github.com/user-attachments/assets/18dd9b3b-3456-49d1-a9f5-8e8027f3f22d)
 
